@@ -1,0 +1,159 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%
+    
+}
+
+
+header
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 17.5%;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+}
+
+#main
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.top
+{
+    position: relative;
+    z-index: 1;
+    width: 350px;
+    height: 500px;
+    padding: 3px;
+}
+
+img
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 350px;
+    height: 500px;
+}
+
+img:hover
+{
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 6px;
+    width: 100%;
+}
+
+p{font-size: 20px}
+
+
+
+
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    
+    li {
+      flex: auto; 
+    }
+  
+    a {
+      display: block;
+    }
+    
+    img {
+      width: 30vmin;
+      height: 20vmin;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  
+  .slides {
+    overflow: hidden;
+    width: 75vmin;
+    height: 100vmin;
+    
+    li {
+      width: 75vmin;
+      height: 100vmin;
+      position: absolute;
+      z-index: 1;
+    }
+    
+    img {
+      height: 100vmin;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  
+  .slides li:target {
+    z-index: 3;
+    -webkit-animation: slide 1s 1;
+  }
+  
+  .slides li:not(:target) {
+    -webkit-animation: hidden 1s 1;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  @keyframes hidden {
+    0% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 2;
+    }
+  }
